@@ -1,0 +1,318 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "customer_id": 456,
+      "customer_name": "John Smith",
+      "order_date": "2025-08-05",
+      "status": "pending",
+      "total_amount": 66.00,
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg"
+    },
+    {
+      "id": 2,
+      "customer_id": 789,
+      "customer_name": "Emily Johnson",
+      "order_date": "2025-08-03",
+      "status": "shipped",
+      "total_amount": 129.95,
+      "avatar": "https://randomuser.me/api/portraits/women/2.jpg"
+    },
+    {
+      "id": 3,
+      "customer_id": 101,
+      "customer_name": "Michael Brown",
+      "order_date": "2025-08-06",
+      "status": "delivered",
+      "total_amount": 89.50,
+      "avatar": "https://randomuser.me/api/portraits/men/3.jpg"
+    },
+    {
+      "id": 4,
+      "customer_id": 202,
+      "customer_name": "Sarah Davis",
+      "order_date": "2025-08-01",
+      "status": "cancelled",
+      "total_amount": 45.00,
+      "avatar": "https://randomuser.me/api/portraits/women/4.jpg"
+    },
+    {
+      "id": 5,
+      "customer_id": 303,
+      "customer_name": "David Wilson",
+      "order_date": "2025-08-04",
+      "status": "pending",
+      "total_amount": 199.99,
+      "avatar": "https://randomuser.me/api/portraits/men/5.jpg"
+    },
+    {
+      "id": 6,
+      "customer_id": 404,
+      "customer_name": "Jennifer Moore",
+      "order_date": "2025-08-02",
+      "status": "shipped",
+      "total_amount": 75.50,
+      "avatar": "https://randomuser.me/api/portraits/women/6.jpg"
+    },
+    {
+      "id": 7,
+      "customer_id": 505,
+      "customer_name": "Robert Taylor",
+      "order_date": "2025-08-07",
+      "status": "delivered",
+      "total_amount": 149.95,
+      "avatar": "https://randomuser.me/api/portraits/men/7.jpg"
+    },
+    {
+      "id": 8,
+      "customer_id": 606,
+      "customer_name": "Lisa Anderson",
+      "order_date": "2025-07-31",
+      "status": "pending",
+      "total_amount": 59.99,
+      "avatar": "https://randomuser.me/api/portraits/women/8.jpg"
+    },
+    {
+      "id": 9,
+      "customer_id": 707,
+      "customer_name": "Thomas White",
+      "order_date": "2025-08-08",
+      "status": "shipped",
+      "total_amount": 112.75,
+      "avatar": "https://randomuser.me/api/portraits/men/9.jpg"
+    },
+    {
+      "id": 10,
+      "customer_id": 808,
+      "customer_name": "Amanda Harris",
+      "order_date": "2025-08-05",
+      "status": "cancelled",
+      "total_amount": 29.99,
+      "avatar": "https://randomuser.me/api/portraits/women/10.jpg"
+    }
+  ],
+  "order_details": [
+    {
+      "id": 1,
+      "customer_id": 456,
+      "customer_name": "John Smith",
+      "order_date": "2025-08-05",
+      "status": "pending",
+      "total_amount": 66.00,
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+      "lines": [
+        {
+          "product_id": 1001,
+          "product_name": "Premium T-Shirt",
+          "quantity": 2,
+          "unit_price": 25.50,
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1002,
+          "product_name": "Cotton Socks (3-pack)",
+          "quantity": 1,
+          "unit_price": 15.00,
+          "image": "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "customer_id": 789,
+      "customer_name": "Emily Johnson",
+      "order_date": "2025-08-03",
+      "status": "shipped",
+      "total_amount": 129.95,
+      "avatar": "https://randomuser.me/api/portraits/women/2.jpg",
+      "lines": [
+        {
+          "product_id": 1003,
+          "product_name": "Casual Jeans",
+          "quantity": 1,
+          "unit_price": 49.95,
+          "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1004,
+          "product_name": "Running Shoes",
+          "quantity": 1,
+          "unit_price": 80.00,
+          "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "customer_id": 101,
+      "customer_name": "Michael Brown",
+      "order_date": "2025-08-06",
+      "status": "delivered",
+      "total_amount": 89.50,
+      "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
+      "lines": [
+        {
+          "product_id": 1005,
+          "product_name": "Leather Belt",
+          "quantity": 1,
+          "unit_price": 29.50,
+          "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1006,
+          "product_name": "Casual Shirt",
+          "quantity": 2,
+          "unit_price": 30.00,
+          "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "customer_id": 202,
+      "customer_name": "Sarah Davis",
+      "order_date": "2025-08-01",
+      "status": "cancelled",
+      "total_amount": 45.00,
+      "avatar": "https://randomuser.me/api/portraits/women/4.jpg",
+      "lines": [
+        {
+          "product_id": 1007,
+          "product_name": "Summer Dress",
+          "quantity": 1,
+          "unit_price": 45.00,
+          "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "customer_id": 303,
+      "customer_name": "David Wilson",
+      "order_date": "2025-08-04",
+      "status": "pending",
+      "total_amount": 199.99,
+      "avatar": "https://randomuser.me/api/portraits/men/5.jpg",
+      "lines": [
+        {
+          "product_id": 1008,
+          "product_name": "Smartwatch",
+          "quantity": 1,
+          "unit_price": 199.99,
+          "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "customer_id": 404,
+      "customer_name": "Jennifer Moore",
+      "order_date": "2025-08-02",
+      "status": "shipped",
+      "total_amount": 75.50,
+      "avatar": "https://randomuser.me/api/portraits/women/6.jpg",
+      "lines": [
+        {
+          "product_id": 1009,
+          "product_name": "Sunglasses",
+          "quantity": 1,
+          "unit_price": 35.50,
+          "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1010,
+          "product_name": "Beach Hat",
+          "quantity": 1,
+          "unit_price": 20.00,
+          "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1011,
+          "product_name": "Flip Flops",
+          "quantity": 1,
+          "unit_price": 20.00,
+          "image": "https://images.unsplash.com/photo-1544966503-7cc5ac882d5d?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "customer_id": 505,
+      "customer_name": "Robert Taylor",
+      "order_date": "2025-08-07",
+      "status": "delivered",
+      "total_amount": 149.95,
+      "avatar": "https://randomuser.me/api/portraits/men/7.jpg",
+      "lines": [
+        {
+          "product_id": 1012,
+          "product_name": "Bluetooth Headphones",
+          "quantity": 1,
+          "unit_price": 149.95,
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "customer_id": 606,
+      "customer_name": "Lisa Anderson",
+      "order_date": "2025-07-31",
+      "status": "pending",
+      "total_amount": 59.99,
+      "avatar": "https://randomuser.me/api/portraits/women/8.jpg",
+      "lines": [
+        {
+          "product_id": 1013,
+          "product_name": "Winter Jacket",
+          "quantity": 1,
+          "unit_price": 59.99,
+          "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "customer_id": 707,
+      "customer_name": "Thomas White",
+      "order_date": "2025-08-08",
+      "status": "shipped",
+      "total_amount": 112.75,
+      "avatar": "https://randomuser.me/api/portraits/men/9.jpg",
+      "lines": [
+        {
+          "product_id": 1014,
+          "product_name": "Backpack",
+          "quantity": 1,
+          "unit_price": 54.99,
+          "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1015,
+          "product_name": "Water Bottle",
+          "quantity": 2,
+          "unit_price": 28.88,
+          "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "customer_id": 808,
+      "customer_name": "Amanda Harris",
+      "order_date": "2025-08-05",
+      "status": "cancelled",
+      "total_amount": 29.99,
+      "avatar": "https://randomuser.me/api/portraits/women/10.jpg",
+      "lines": [
+        {
+          "product_id": 1016,
+          "product_name": "Phone Case",
+          "quantity": 1,
+          "unit_price": 29.99,
+          "image": "https://images.unsplash.com/photo-1601944177325-f8867652837f?w=400&h=400&fit=crop"
+        }
+      ]
+    }
+  ]
+}

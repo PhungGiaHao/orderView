@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import { UIProvider } from './contexts/UIContext';
+import { OrderProvider } from './contexts/OrderContext';
+import Navigation from './navigation/Navigation';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SafeAreaView style={styles.container}>
+      <UIProvider>
+        <OrderProvider>
+          <Navigation />
+        </OrderProvider>
+      </UIProvider>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
 
 export default App;
