@@ -17,10 +17,9 @@ const Drawer: React.FC = () => {
 
   return (
     <View style={styles.overlay}>
-      <TouchableOpacity style={styles.overlayBackground} onPress={closeDrawer} />
       <View style={styles.drawer}>
         <View style={styles.header}>
-          <Text style={styles.title}>Order Viewer</Text>
+          <Text style={styles.title}>Menu</Text>
           <TouchableOpacity onPress={closeDrawer} style={styles.closeButton}>
             <IconSvg name="close" size={24} color="#333" />
           </TouchableOpacity>
@@ -52,6 +51,7 @@ const Drawer: React.FC = () => {
           </TouchableOpacity>
         </ScrollView>
       </View>
+      <TouchableOpacity style={styles.overlayBackground} onPress={closeDrawer} />
     </View>
   );
 };
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     width: 280,
     backgroundColor: '#ffffff',
     shadowColor: '#000',
-    shadowOffset: { width: -2, height: 0 },
+    shadowOffset: { width: 2, height: 0 }, // Đảo ngược hướng bóng đổ sang phải
     shadowOpacity: 0.2,
     shadowRadius: 5,
     elevation: 5,

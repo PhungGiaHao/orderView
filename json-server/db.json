@@ -89,6 +89,141 @@
       "status": "cancelled",
       "total_amount": 29.99,
       "avatar": "https://randomuser.me/api/portraits/women/10.jpg"
+    },
+    {
+      "id": 11,
+      "customer_id": 909,
+      "customer_name": "James Wilson",
+      "order_date": "2025-08-09",
+      "status": "pending",
+      "total_amount": 85.75,
+      "avatar": "https://randomuser.me/api/portraits/men/11.jpg"
+    },
+    {
+      "id": 12,
+      "customer_id": 1012,
+      "customer_name": "Maria Garcia",
+      "order_date": "2025-08-10",
+      "status": "shipped",
+      "total_amount": 156.80,
+      "avatar": "https://randomuser.me/api/portraits/women/12.jpg"
+    },
+    {
+      "id": 13,
+      "customer_id": 111,
+      "customer_name": "Kevin Brown",
+      "order_date": "2025-08-11",
+      "status": "delivered",
+      "total_amount": 92.30,
+      "avatar": "https://randomuser.me/api/portraits/men/13.jpg"
+    },
+    {
+      "id": 14,
+      "customer_id": 121,
+      "customer_name": "Jessica Lee",
+      "order_date": "2025-08-12",
+      "status": "pending",
+      "total_amount": 47.99,
+      "avatar": "https://randomuser.me/api/portraits/women/14.jpg"
+    },
+    {
+      "id": 15,
+      "customer_id": 131,
+      "customer_name": "Daniel Miller",
+      "order_date": "2025-08-13",
+      "status": "shipped",
+      "total_amount": 203.45,
+      "avatar": "https://randomuser.me/api/portraits/men/15.jpg"
+    },
+    {
+      "id": 16,
+      "customer_id": 141,
+      "customer_name": "Ashley Turner",
+      "order_date": "2025-08-14",
+      "status": "cancelled",
+      "total_amount": 33.50,
+      "avatar": "https://randomuser.me/api/portraits/women/16.jpg"
+    },
+    {
+      "id": 17,
+      "customer_id": 151,
+      "customer_name": "Ryan Clark",
+      "order_date": "2025-08-15",
+      "status": "pending",
+      "total_amount": 118.20,
+      "avatar": "https://randomuser.me/api/portraits/men/17.jpg"
+    },
+    {
+      "id": 18,
+      "customer_id": 161,
+      "customer_name": "Sophia Martinez",
+      "order_date": "2025-08-16",
+      "status": "delivered",
+      "total_amount": 167.90,
+      "avatar": "https://randomuser.me/api/portraits/women/18.jpg"
+    },
+    {
+      "id": 19,
+      "customer_id": 171,
+      "customer_name": "Christopher Davis",
+      "order_date": "2025-08-17",
+      "status": "shipped",
+      "total_amount": 78.65,
+      "avatar": "https://randomuser.me/api/portraits/men/19.jpg"
+    },
+    {
+      "id": 20,
+      "customer_id": 181,
+      "customer_name": "Emma Rodriguez",
+      "order_date": "2025-08-18",
+      "status": "pending",
+      "total_amount": 145.30,
+      "avatar": "https://randomuser.me/api/portraits/women/20.jpg"
+    },
+    {
+      "id": 21,
+      "customer_id": 191,
+      "customer_name": "Matthew Thompson",
+      "order_date": "2025-08-19",
+      "status": "delivered",
+      "total_amount": 56.85,
+      "avatar": "https://randomuser.me/api/portraits/men/21.jpg"
+    },
+    {
+      "id": 22,
+      "customer_id": 201,
+      "customer_name": "Olivia Johnson",
+      "order_date": "2025-08-20",
+      "status": "shipped",
+      "total_amount": 124.75,
+      "avatar": "https://randomuser.me/api/portraits/women/22.jpg"
+    },
+    {
+      "id": 23,
+      "customer_id": 211,
+      "customer_name": "Andrew Wilson",
+      "order_date": "2025-08-21",
+      "status": "cancelled",
+      "total_amount": 89.40,
+      "avatar": "https://randomuser.me/api/portraits/men/23.jpg"
+    },
+    {
+      "id": 24,
+      "customer_id": 221,
+      "customer_name": "Isabella Brown",
+      "order_date": "2025-08-22",
+      "status": "pending",
+      "total_amount": 175.60,
+      "avatar": "https://randomuser.me/api/portraits/women/24.jpg"
+    },
+    {
+      "id": 25,
+      "customer_id": 231,
+      "customer_name": "Joshua Garcia",
+      "order_date": "2025-08-23",
+      "status": "delivered",
+      "total_amount": 95.25,
+      "avatar": "https://randomuser.me/api/portraits/men/25.jpg"
     }
   ],
   "order_details": [
@@ -311,6 +446,346 @@
           "quantity": 1,
           "unit_price": 29.99,
           "image": "https://images.unsplash.com/photo-1601944177325-f8867652837f?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "customer_id": 909,
+      "customer_name": "James Wilson",
+      "order_date": "2025-08-09",
+      "status": "pending",
+      "total_amount": 85.75,
+      "avatar": "https://randomuser.me/api/portraits/men/11.jpg",
+      "lines": [
+        {
+          "product_id": 1017,
+          "product_name": "Gaming Mouse",
+          "quantity": 1,
+          "unit_price": 45.99,
+          "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1018,
+          "product_name": "Mouse Pad",
+          "quantity": 1,
+          "unit_price": 39.76,
+          "image": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "customer_id": 1012,
+      "customer_name": "Maria Garcia",
+      "order_date": "2025-08-10",
+      "status": "shipped",
+      "total_amount": 156.80,
+      "avatar": "https://randomuser.me/api/portraits/women/12.jpg",
+      "lines": [
+        {
+          "product_id": 1019,
+          "product_name": "Laptop Stand",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1020,
+          "product_name": "Wireless Keyboard",
+          "quantity": 1,
+          "unit_price": 76.81,
+          "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "customer_id": 111,
+      "customer_name": "Kevin Brown",
+      "order_date": "2025-08-11",
+      "status": "delivered",
+      "total_amount": 92.30,
+      "avatar": "https://randomuser.me/api/portraits/men/13.jpg",
+      "lines": [
+        {
+          "product_id": 1021,
+          "product_name": "Coffee Mug",
+          "quantity": 3,
+          "unit_price": 18.99,
+          "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1022,
+          "product_name": "Notebook Set",
+          "quantity": 1,
+          "unit_price": 35.33,
+          "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "customer_id": 121,
+      "customer_name": "Jessica Lee",
+      "order_date": "2025-08-12",
+      "status": "pending",
+      "total_amount": 47.99,
+      "avatar": "https://randomuser.me/api/portraits/women/14.jpg",
+      "lines": [
+        {
+          "product_id": 1023,
+          "product_name": "Hand Cream",
+          "quantity": 2,
+          "unit_price": 23.99,
+          "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "customer_id": 131,
+      "customer_name": "Daniel Miller",
+      "order_date": "2025-08-13",
+      "status": "shipped",
+      "total_amount": 203.45,
+      "avatar": "https://randomuser.me/api/portraits/men/15.jpg",
+      "lines": [
+        {
+          "product_id": 1024,
+          "product_name": "Tablet",
+          "quantity": 1,
+          "unit_price": 203.45,
+          "image": "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "customer_id": 141,
+      "customer_name": "Ashley Turner",
+      "order_date": "2025-08-14",
+      "status": "cancelled",
+      "total_amount": 33.50,
+      "avatar": "https://randomuser.me/api/portraits/women/16.jpg",
+      "lines": [
+        {
+          "product_id": 1025,
+          "product_name": "Lip Balm",
+          "quantity": 5,
+          "unit_price": 6.70,
+          "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "customer_id": 151,
+      "customer_name": "Ryan Clark",
+      "order_date": "2025-08-15",
+      "status": "pending",
+      "total_amount": 118.20,
+      "avatar": "https://randomuser.me/api/portraits/men/17.jpg",
+      "lines": [
+        {
+          "product_id": 1026,
+          "product_name": "Desk Lamp",
+          "quantity": 1,
+          "unit_price": 59.99,
+          "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1027,
+          "product_name": "Power Bank",
+          "quantity": 1,
+          "unit_price": 58.21,
+          "image": "https://images.unsplash.com/photo-1609592806671-b47ccfd0e433?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "customer_id": 161,
+      "customer_name": "Sophia Martinez",
+      "order_date": "2025-08-16",
+      "status": "delivered",
+      "total_amount": 167.90,
+      "avatar": "https://randomuser.me/api/portraits/women/18.jpg",
+      "lines": [
+        {
+          "product_id": 1028,
+          "product_name": "Yoga Mat",
+          "quantity": 1,
+          "unit_price": 39.99,
+          "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1029,
+          "product_name": "Fitness Tracker",
+          "quantity": 1,
+          "unit_price": 127.91,
+          "image": "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "customer_id": 171,
+      "customer_name": "Christopher Davis",
+      "order_date": "2025-08-17",
+      "status": "shipped",
+      "total_amount": 78.65,
+      "avatar": "https://randomuser.me/api/portraits/men/19.jpg",
+      "lines": [
+        {
+          "product_id": 1030,
+          "product_name": "Baseball Cap",
+          "quantity": 2,
+          "unit_price": 24.99,
+          "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1031,
+          "product_name": "Sports Socks",
+          "quantity": 1,
+          "unit_price": 28.67,
+          "image": "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "customer_id": 181,
+      "customer_name": "Emma Rodriguez",
+      "order_date": "2025-08-18",
+      "status": "pending",
+      "total_amount": 145.30,
+      "avatar": "https://randomuser.me/api/portraits/women/20.jpg",
+      "lines": [
+        {
+          "product_id": 1032,
+          "product_name": "Perfume",
+          "quantity": 1,
+          "unit_price": 89.99,
+          "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1033,
+          "product_name": "Jewelry Box",
+          "quantity": 1,
+          "unit_price": 55.31,
+          "image": "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "customer_id": 191,
+      "customer_name": "Matthew Thompson",
+      "order_date": "2025-08-19",
+      "status": "delivered",
+      "total_amount": 56.85,
+      "avatar": "https://randomuser.me/api/portraits/men/21.jpg",
+      "lines": [
+        {
+          "product_id": 1034,
+          "product_name": "Car Phone Mount",
+          "quantity": 1,
+          "unit_price": 24.99,
+          "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1035,
+          "product_name": "Car Charger",
+          "quantity": 1,
+          "unit_price": 31.86,
+          "image": "https://images.unsplash.com/photo-1609592806671-b47ccfd0e433?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "customer_id": 201,
+      "customer_name": "Olivia Johnson",
+      "order_date": "2025-08-20",
+      "status": "shipped",
+      "total_amount": 124.75,
+      "avatar": "https://randomuser.me/api/portraits/women/22.jpg",
+      "lines": [
+        {
+          "product_id": 1036,
+          "product_name": "Kitchen Scale",
+          "quantity": 1,
+          "unit_price": 49.99,
+          "image": "https://images.unsplash.com/photo-1556909114-4e3f4e8b806e?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1037,
+          "product_name": "Mixing Bowls Set",
+          "quantity": 1,
+          "unit_price": 74.76,
+          "image": "https://images.unsplash.com/photo-1556909114-4e3f4e8b806e?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "customer_id": 211,
+      "customer_name": "Andrew Wilson",
+      "order_date": "2025-08-21",
+      "status": "cancelled",
+      "total_amount": 89.40,
+      "avatar": "https://randomuser.me/api/portraits/men/23.jpg",
+      "lines": [
+        {
+          "product_id": 1038,
+          "product_name": "Board Game",
+          "quantity": 1,
+          "unit_price": 89.40,
+          "image": "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "customer_id": 221,
+      "customer_name": "Isabella Brown",
+      "order_date": "2025-08-22",
+      "status": "pending",
+      "total_amount": 175.60,
+      "avatar": "https://randomuser.me/api/portraits/women/24.jpg",
+      "lines": [
+        {
+          "product_id": 1039,
+          "product_name": "Electric Toothbrush",
+          "quantity": 1,
+          "unit_price": 129.99,
+          "image": "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=400&h=400&fit=crop"
+        },
+        {
+          "product_id": 1040,
+          "product_name": "Toothbrush Heads",
+          "quantity": 1,
+          "unit_price": 45.61,
+          "image": "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=400&h=400&fit=crop"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "customer_id": 231,
+      "customer_name": "Joshua Garcia",
+      "order_date": "2025-08-23",
+      "status": "delivered",
+      "total_amount": 95.25,
+      "avatar": "https://randomuser.me/api/portraits/men/25.jpg",
+      "lines": [
+        {
+          "product_id": 1041,
+          "product_name": "Garden Tools Set",
+          "quantity": 1,
+          "unit_price": 95.25,
+          "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=400&fit=crop"
         }
       ]
     }

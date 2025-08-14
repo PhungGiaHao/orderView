@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
   const handleSubmitSearch = () => {
     applyFilters();
   };
-
+console.log(isSmallMobile)
   return (
     <View style={[
       styles.container, 
@@ -96,15 +96,25 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
       {/* For very small mobile: Simplified search only */}
       {isSmallMobile ? (
         <View style={styles.smallMobileSearchSection}>
-          <View style={styles.smallMobileSearchContainer}>
-            <IconSvg name="search" size={14} color="#666" style={styles.searchIcon} />
+          <View style={[
+            styles.smallMobileSearchContainer,
+            // isSearchFocused && styles.focusedSearchContainer,
+            // Giữ nguyên maxWidth để tránh layout shift
+            isSearchFocused && { maxWidth: 120 }
+          ]}>
+            <IconSvg name="search" size={14} color={isSearchFocused ? "#2563eb" : "#666"} style={styles.searchIcon} />
             <TextInput
-              style={styles.smallMobileSearchInput}
+              style={[
+                styles.smallMobileSearchInput,
+                // isSearchFocused && styles.focusedSearchInput
+              ]}
               placeholder="Search..."
               placeholderTextColor="#999"
               value={filters.customerId}
               onChangeText={handleCustomerIdSearch}
               onSubmitEditing={handleSubmitSearch}
+              onFocus={() => setIsSearchFocused(true)}
+              onBlur={() => setIsSearchFocused(false)}
             />
             {filters.customerId ? (
               <TouchableOpacity 
@@ -171,15 +181,25 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
       ) : isLargeMobile ? (
         /* Large Mobile layout for iPhone XR, etc */
         <View style={styles.largeMobileSearchSection}>
-          <View style={styles.largeMobileSearchContainer}>
-            <IconSvg name="search" size={15} color="#666" style={styles.searchIcon} />
+          <View style={[
+            styles.largeMobileSearchContainer,
+            // isSearchFocused && styles.focusedSearchContainer,
+            // Không thay đổi kích thước khi focus
+            isSearchFocused && { maxWidth: 150 }
+          ]}>
+            <IconSvg name="search" size={15} color={isSearchFocused ? "#2563eb" : "#666"} style={styles.searchIcon} />
             <TextInput
-              style={styles.largeMobileSearchInput}
+              style={[
+                styles.largeMobileSearchInput,
+                // isSearchFocused && styles.focusedSearchInput
+              ]}
               placeholder="Search ID..."
               placeholderTextColor="#999"
               value={filters.customerId}
               onChangeText={handleCustomerIdSearch}
               onSubmitEditing={handleSubmitSearch}
+              onFocus={() => setIsSearchFocused(true)}
+              onBlur={() => setIsSearchFocused(false)}
             />
             {filters.customerId ? (
               <TouchableOpacity 
@@ -249,15 +269,21 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
           {/* Mobile: Stack search and filter vertically when search is focused */}
           {isMobile && isSearchFocused ? (
             <View style={styles.mobileSearchFull}>
-              <View style={styles.searchInputContainer}>
+              <View style={[
+                styles.searchInputContainer,
+              //   styles.focusedSearchContainer // Always focused in this view
+              ]}>
                 <IconSvg
                   name="search"
                   size={16}
-                  color="#666"
+                  color="#2563eb"
                   style={styles.searchIcon}
                 />
                 <TextInput
-                  style={styles.searchInput}
+                  style={[
+                    styles.searchInput,
+                    // styles.focusedSearchInput
+                  ]}
                   placeholder="Search by customer ID..."
                   placeholderTextColor="#999"
                   value={filters.customerId}
@@ -288,18 +314,22 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
                 style={[
                   styles.searchInputContainer,
                   isMobile && styles.mobileSearchContainer,
+                  // isSearchFocused && styles.focusedSearchContainer,
+                  // Không thay đổi maxWidth khi focus để tránh layout shift
+                  isSearchFocused && isMobile && { maxWidth: 200 }
                 ]}
               >
                 <IconSvg
                   name="search"
                   size={16}
-                  color="#666"
+                  color={isSearchFocused ? "#2563eb" : "#666"}
                   style={styles.searchIcon}
                 />
                 <TextInput
                   style={[
                     styles.searchInput,
                     (isTablet || isDesktop) && styles.wideInput,
+                    // isSearchFocused && styles.focusedSearchInput,
                   ]}
                   placeholder={
                     isMobile ? "Search..." : "Search by customer ID..."
@@ -448,23 +478,25 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     flex: 1,
+    marginLeft: 10,
   },
   searchInputContainer: {
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
     borderColor: "#e0e0e0",
-    borderRadius: 4,
-    height: 36,
-    flex:1,
-    maxWidth:350,
-    paddingLeft: 8,
+    borderRadius: 8, // Tăng border-radius để phù hợp với hình ảnh bạn chia sẻ
+    height: 42, // Tăng chiều cao một chút
+    flex: 1,
+    maxWidth: 350,
+    paddingLeft: 12, // Tăng padding cho biểu tượng search
+    backgroundColor: "#ffffff",
   },
   searchIcon: {
     marginRight: 6,
   },
   searchInput: {
-    height: 32,
+    height: 40,
     fontSize: 14,
     paddingTop: 0,
     paddingBottom: 0,
@@ -576,7 +608,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     padding: 12,
     borderBottomWidth: 1,
-    borderBottomColor: "#e0e0e0",
+    borderBottomColor: "#2563eb",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 3,
     zIndex: 1000,
   },
   mobileSearchContainer: {
@@ -625,6 +662,7 @@ const styles = StyleSheet.create({
     paddingTop: 0,
     paddingBottom: 0,
     paddingHorizontal: 4,
+    maxWidth:94,
   },
   smallMobileClearButton: {
     padding: 2,
@@ -697,6 +735,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     minWidth: 32,
     height: 32,
+  },
+  // Focus styles for search inputs
+  focusedSearchContainer: {
+    borderColor: '#2563eb',
+    borderWidth: 2, // Sử dụng border width là 2 để focus rõ ràng hơn
+    backgroundColor: '#f0f7ff',
+    shadowColor: '#2563eb',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 2,
+    paddingLeft: 11, // Giảm padding 1px để bù cho border tăng 1px
+  },
+  focusedSearchInput: {
+    color: '#1a1a1a',
+    fontWeight: '500',  // Làm nổi bật text khi focus
   },
 });
 

@@ -8,15 +8,24 @@ import { Order } from '@/types/Order';
 import IconSvg from '@/components/ui/IconSvg';
 
 export const OrdersScreen: React.FC = () => {
-  const { orders, fetchAllOrders, isLoading, error } = useOrders();
+  const { 
+    orders, 
+    fetchAllOrders, 
+    loadMoreOrders, 
+    isLoading, 
+    isLoadingMore, 
+    hasMoreData, 
+    error 
+  } = useOrders();
   const { openModal, closeModal } = useUI();
   const [customerName, setCustomerName] = useState('');
   const [productName, setProductName] = useState('');
   const [quantity, setQuantity] = useState('');
+  const [isLoadingDebounce, setIsLoadingDebounce] = useState(false);
 
   useEffect(() => {
     fetchAllOrders();
-  }, []);
+  }, [fetchAllOrders]);
   
   const handleAddNewOrder = () => {
     openModal(
@@ -106,6 +115,54 @@ export const OrdersScreen: React.FC = () => {
     return <OrderListItem order={item} />;
   };
 
+  const handleLoadMore = () => {
+    console.log('HandleLoadMore called:', {
+      hasMoreData,
+      isLoadingMore,
+      isLoading,
+      isLoadingDebounce,
+      ordersCount: orders.length
+    });
+    
+    if (hasMoreData && !isLoadingMore && !isLoading && !isLoadingDebounce) {
+      console.log('Initiating load more...');
+      // Set debounce flag to prevent multiple rapid calls
+      setIsLoadingDebounce(true);
+      
+      // Add small delay before starting load to ensure UI responsiveness
+      setTimeout(() => {
+        loadMoreOrders().finally(() => {
+          // Add a reasonable delay after loading to prevent rapid successive calls
+          // This ensures the user can see each batch loaded before requesting more
+          setTimeout(() => {
+            setIsLoadingDebounce(false);
+          }, 1500); // Increased debounce time for better user experience
+        });
+      }, 100);
+    } else {
+      console.log('Load more blocked by conditions');
+    }
+  };
+
+  const renderFooter = () => {
+    if (!hasMoreData && orders.length > 0) {
+      return (
+        <View style={styles.footerLoader}>
+          <Text style={styles.footerText}>No more orders to load</Text>
+        </View>
+      );
+    }
+    
+    if (!isLoadingMore) return null;
+    
+    return (
+      <View style={styles.footerLoader}>
+        <ActivityIndicator size="small" color="#2563eb" />
+        <Text style={styles.footerText}>Loading more orders...</Text>
+      </View>
+    );
+  };
+
   if (isLoading && orders.length === 0) {
     return (
       <View style={styles.centered}>
@@ -130,6 +187,9 @@ export const OrdersScreen: React.FC = () => {
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
         contentContainerStyle={styles.listContent}
+        onEndReached={handleLoadMore}
+        onEndReachedThreshold={0.3}
+        ListFooterComponent={renderFooter}
         ListEmptyComponent={
           <View style={styles.emptyContainer}>
             <Text style={styles.emptyText}>No orders found</Text>
@@ -272,5 +332,15 @@ const styles = StyleSheet.create({
   },
   createButtonText: {
     color: '#fff',
+  },
+  footerLoader: {
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  footerText: {
+    marginTop: 8,
+    fontSize: 14,
+    color: '#666',
   },
 });
